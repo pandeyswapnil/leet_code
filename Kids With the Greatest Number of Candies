@@ -1,0 +1,18 @@
+def checkGreatest(duplicate, val) -> bool:
+        for i in duplicate:
+            if (i > val):
+                return False
+
+        return True
+
+class Solution:
+        
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        a = list()
+        for i in candies: 
+            i += extraCandies
+            a.append( checkGreatest( candies, i))
+
+        return a
+            
+    
